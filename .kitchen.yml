@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+    cpus: 1
+  network:
+   - ['private_network', ip: '10.1.1.50']
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  # always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: mycsc-7.5
+
+suites:
+  - name: nc_base
+    run_list:
+#      - recipe[nc_base::do_prs]
+      - recipe[nc_base::my_nc_base]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
