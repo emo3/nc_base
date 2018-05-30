@@ -23,7 +23,7 @@ suites:
   - name: nc_base
     run_list:
       # - recipe[nc_base::do_prs]
-      - recipe[nc_base::my_nc_base]
+      - recipe[nc_base::make_nc_base]
     verifier:
       inspec_tests:
         - test/smoke/default
