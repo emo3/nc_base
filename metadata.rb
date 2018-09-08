@@ -19,8 +19,7 @@ supports 'redhat'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/nc_base'
-depends 'delivery-truck'
-depends 'lvm'
+depends 'server_utils', '~> 0.1.0'
+# depends 'delivery-truck'
 depends 'limits'
-depends 'hostsfile'
 depends 'selinux'
