@@ -6,7 +6,6 @@ default['nc_base']['fp_rel']      = '5.50.77.20180501_0604'
 default['nc_base']['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
 default['nc_base']['im_ver']      = '1.8.9000.20180313_1417'
 default['nc_base']['im_pkg']      = "agent.installer.linux.gtk.x86_64_#{node['nc_base']['im_ver']}.zip"
-default['nc_base']['im_256']      = '68de60a55a8c43ceab9fbfd25510084be131dd8226814c6e30e0193696a6a11c'
 default['nc_base']['prs']         = '1.2.0.18-Tivoli-PRS-Unix-fp0001.tar'
 default['nc_base']['prs_patch']   = 'netcool-prs-IV93620.tar.gz'
 default['nc_base']['cots_dir']    = '/cots'
