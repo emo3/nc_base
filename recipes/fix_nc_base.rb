@@ -1,3 +1,10 @@
+# remove any extra repos from yum.repos.d
+execute 'remove_repos' do
+  command 'rm -f /etc/yum.repo.d/CentOS*'
+  cwd '/etc/yum.repo.d'
+  action :run
+end
+
 # make sure we have the latest RHEL versions
 execute 'update_RHEL' do
   command 'yum -y -q update'
