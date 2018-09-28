@@ -1,7 +1,7 @@
 # remove any extra repos from yum.repos.d
 execute 'remove_repos' do
-  command 'rm -f /etc/yum.repo.d/CentOS*'
-  cwd '/etc/yum.repo.d'
+  command 'rm -f /etc/yum.repos.d/CentOS*'
+  cwd '/usr/bin'
   action :run
 end
 
