@@ -1,7 +1,7 @@
 # make sure we have the latest RHEL versions
 execute 'update_RHEL' do
   command 'yum -y -q update'
-  action :run
+  action :nothing
 end
 
 #######################################
