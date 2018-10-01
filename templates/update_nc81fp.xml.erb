@@ -8,7 +8,10 @@
   </server>
   <profile id='IBM Tivoli Netcool OMNIbus' installLocation='<%= node['nc_base']['nc_dir'] %>'>
     <data key='cic.selector.arch' value='x86_64'/>
+    <!-- Data for IBM Tivoli Netcool/OMNIbus: -->
+    <!-- Migrate OMNIbus data -->
     <data key='user.migratedata,com.ibm.tivoli.omnibus.core' value='false'/>
+    <data key='user.omnibus.core.java8warning.accepted,com.ibm.tivoli.omnibus.core' value='true'/>
   </profile>
   <install>
     <!-- IBM Tivoli Netcool/OMNIbus 8.1.0.<%= node['nc_base']['fp_ver'] %> -->

@@ -2,3 +2,4 @@ export TEMP=<%= node['nc_base']['temp_dir'] %>
 export TIVHOME=<%= node['nc_base']['app_dir'] %>
 export IMCL=$TIVHOME/InstallationManager/eclipse/tools/imcl
 alias listapps="$IMCL listInstalledPackages -features -long"
+alias listav="$IMCL listAvailablePackages -repositories ."

@@ -1,8 +1,8 @@
 default['nc_base']['base_ver']    = '8.1.0'
 default['nc_base']['point_ver']   = "#{node['nc_base']['base_ver']}.1"
-default['nc_base']['fp_ver']      = '16'
+default['nc_base']['fp_ver']      = '17'
 default['nc_base']['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-NCOMNIbus-Linux-FP00#{node['nc_base']['fp_ver']}.zip"
-default['nc_base']['fp_rel']      = '5.50.77.20180501_0604'
+default['nc_base']['fp_rel']      = '5.50.80.20180828_1912'
 default['nc_base']['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
 default['nc_base']['im_ver']      = '1.8.9000.20180313_1417'
 default['nc_base']['im_pkg']      = "agent.installer.linux.gtk.x86_64_#{node['nc_base']['im_ver']}.zip"
