@@ -7,11 +7,11 @@
 require 'spec_helper'
 
 describe 'nc_base::make_nc_base' do
-  context 'When all attributes are default, on an RedHat 7.5' do
+  context 'When all attributes are default, on an Redhat 7.6' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
       # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
-      runner = ChefSpec::ServerRunner.new(platform: 'redhat', version: '7.5')
+      runner = ChefSpec::ServerRunner.new(platform: 'redhat', version: '7.6')
       runner.converge(described_recipe)
     end
 
