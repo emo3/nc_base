@@ -1,13 +1,13 @@
 # nc_base Cookbook
 
-The purpose of this cookbook is to install Netcool/OMNIbus version 8.1.
-This will also update it to the latest FP.
-This uses Installation Manager to install the software.
-So Installation Manager will be installed as well.
-This does NOT supply any IBM binaries, you will have to do that via PPA.
-As of 2018-05-01 the latest:
-  Netcool/OMNIbus FP:   8.1.0.16
-  Installation Manager: 1.8.9
+The purpose of this cookbook is to install Netcool/OMNIbus version 8.1.<br>
+This will also update it to the latest FP.<br>
+This uses Installation Manager to install the software.<br>
+So Installation Manager will be installed as well.<br>
+This does NOT supply any IBM binaries, you will have to do that via PPA.<br>
+As of 2019-02-06 the latest:<br>
+  Netcool/OMNIbus FP:   8.1.0.18<br>
+  Installation Manager: 1.8.9.2<br>
 
 ## Scope
 
@@ -32,16 +32,15 @@ Also, tailor the subsections below:
 
 ### Chef
 
-- Chef 13
-- Chef SDK 2.5.3
-- Git 2.17
-- Vagrant 2.0.4
+- Chef 13+
+- Chef SDK 2.5.3+
+- Git 2.17+
+- Vagrant 2.0.4+
 
 ### Dependencies
 
-- lvm
+- server_utils
 - limits
-- hostsfile
 - selinux
 
 ## Usage
