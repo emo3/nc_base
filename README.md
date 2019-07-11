@@ -6,8 +6,8 @@ This uses Installation Manager to install the software.<br>
 So Installation Manager will be installed as well.<br>
 This does NOT supply any IBM binaries, you will have to do that via PPA.<br>
 As of 2019-02-06 the latest:<br>
-  Netcool/OMNIbus FP:   8.1.0.18<br>
-  Installation Manager: 1.8.9.2<br>
+  Netcool/OMNIbus FP:   8.1.0.19<br>
+  Installation Manager: 1.8.9.4<br>
 
 ## Scope
 
