@@ -20,5 +20,5 @@ supports 'redhat'
 #
 # source_url 'https://github.com/<insert_org_here>/nc_base'
 depends 'server_utils', '~> 0.1.0'
-depends 'limits'
+depends 'limits', '~> 2.0.0'
 depends 'selinux'
