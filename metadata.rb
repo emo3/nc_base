@@ -4,7 +4,7 @@ maintainer_email 'infuse.1301@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures nc_base'
 long_description 'Installs/Configures nc_base'
-version '0.1.0'
+version '0.2.0'
 chef_version '>= 13.0'
 supports 'redhat'
 
@@ -19,6 +19,6 @@ supports 'redhat'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/nc_base'
-depends 'server_utils', '~> 0.1.0'
-depends 'limits', '~> 2.0.0'
+depends 'server_utils'
+depends 'limits'
 depends 'selinux'
