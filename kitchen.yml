@@ -9,7 +9,7 @@ driver:
 provisioner:
   name: chef_zero
   product_name: chef
-  product_version: <%= ENV['chef_release'] %>
+  product_version: 15.9.17
   install_strategy: always
   # You may wish to disable always updating cookbooks in CI or other testing environments.
   # For example:
@@ -22,7 +22,7 @@ verifier:
 platforms:
   - name: mycentos7
     provisioner:
-      download_url: http://10.1.1.30/media/chef-<%= ENV['chef_release'] %>-1.el7.x86_64.rpm
+      download_url: http://10.1.1.30/media/chef-15.9.17-1.el7.x86_64.rpm
 
 suites:
   - name: nc_base
