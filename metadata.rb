@@ -4,7 +4,7 @@ maintainer_email 'bogus@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures nc_base'
 long_description 'Installs/Configures nc_base'
-version '0.4.0'
+version '0.4.1'
 chef_version '>= 13.0'
 supports 'redhat'
 

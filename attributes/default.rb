@@ -3,7 +3,7 @@ default['nc_base'].tap do |ncb|
   ncb['point_ver']   = "#{node['nc_base']['base_ver']}.1"
   ncb['fp_ver']      = '22'
   ncb['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-NCOMNIbus-Linux-FP00#{node['nc_base']['fp_ver']}.zip"
-  ncb['fp_rel']      = '5.50.20.20140527_1222'
+  ncb['fp_rel']      = '5.50.90.20200205_2042'
   ncb['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
   ncb['im_ver']      = '1.9.1002.20200325_1842'
   ncb['im_pkg']      = "agent.installer.linux.gtk.x86_64_#{node['nc_base']['im_ver']}.zip"
