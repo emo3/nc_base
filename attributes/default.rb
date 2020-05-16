@@ -1,10 +1,10 @@
 default['nc_base']['base_ver']    = '8.1.0'
 default['nc_base']['point_ver']   = "#{node['nc_base']['base_ver']}.1"
-default['nc_base']['fp_ver']      = '19'
+default['nc_base']['fp_ver']      = '22'
 default['nc_base']['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-NCOMNIbus-Linux-FP00#{node['nc_base']['fp_ver']}.zip"
-default['nc_base']['fp_rel']      = '5.50.85.20190328_0606'
+default['nc_base']['fp_rel']      = '5.50.20.20140527_1222'
 default['nc_base']['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
-default['nc_base']['im_ver']      = '1.8.9004.20190423_2015'
+default['nc_base']['im_ver']      = '1.9.1002.20200325_1842'
 default['nc_base']['im_pkg']      = "agent.installer.linux.gtk.x86_64_#{node['nc_base']['im_ver']}.zip"
 default['nc_base']['prs']         = '1.2.0.18-Tivoli-PRS-Unix-fp0001.tar'
 default['nc_base']['prs_patch']   = 'netcool-prs-IV93620.tar.gz'
