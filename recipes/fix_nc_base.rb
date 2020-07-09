@@ -7,10 +7,10 @@ execute 'remove_repos' do
 end
 
 # make sure we have the latest RHEL versions
-execute 'update_RHEL' do
-  command 'yum -y -q update'
-  action :run
-end
+# execute 'update_RHEL' do
+#   command 'yum -y -q update'
+#   action :run
+# end
 
 #######################################
 # The following was taken from the PreRequisite Scanner
