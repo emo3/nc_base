@@ -5,7 +5,7 @@ default['nc_base'].tap do |ncb|
   ncb['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-NCOMNIbus-Linux-FP00#{node['nc_base']['fp_ver']}.zip"
   ncb['fp_rel']      = '5.50.90.20200205_2042'
   ncb['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
-  ncb['im_ver']      = '1.9.1002.20200325_1842'
+  ncb['im_ver']      = '1.9.1003.20200730_2125'
   ncb['im_pkg']      = "agent.installer.linux.gtk.x86_64_#{node['nc_base']['im_ver']}.zip"
   ncb['prs']         = '1.2.0.18-Tivoli-PRS-Unix-fp0001.tar'
   ncb['prs_patch']   = 'netcool-prs-IV93620.tar.gz'
