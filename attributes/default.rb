@@ -21,8 +21,8 @@ default['nc_base'].tap do |ncb|
   ncb['prs_dir']     = '/tmp/prs'
   ncb['im_dir']      = '/tmp/im'
   ncb['media_url']   = 'http://10.1.1.30/media'
-  ncb['rhel']        = %w(bc ntp firefox unzip)
-  ncb['rhel_x11']    = %w(bc ntp firefox compat-libstdc++-33.i686 libXtst.i686 compat-libstdc++-33 compat-db libXp libXmu libXtst pam libXft gtk2 xauth motif xclock)
+  ncb['rhel']        = %w(bc chrony firefox unzip)
+#  ncb['rhel_x11']    = %w(bc chrony firefox compat-libstdc++-33.i686 libXtst.i686 compat-libstdc++-33 compat-db libXp libXmu libXtst pam libXft gtk2 xauth motif xclock)
   ncb['nc_act']      = 'netcool'
   ncb['nc_grp']      = 'ncoadmin'
   ncb['nc_pwd']      = 'P@ssw0rd'

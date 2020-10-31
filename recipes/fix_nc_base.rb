@@ -86,8 +86,8 @@ limit 'limit-stack-soft' do
   value 'unlimited'
 end
 
-# make sure ntp is up and running
-service 'ntpd' do
+# make sure Network Time Protocal is up and running
+service 'chronyd' do
   action [:enable, :start]
 end
 
