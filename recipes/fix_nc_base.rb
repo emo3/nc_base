@@ -1,17 +1,3 @@
-# remove any extra repos from yum.repos.d
-execute 'remove_repos' do
-  command 'rm -f /etc/yum.repos.d/CentOS*'
-  cwd '/usr/bin'
-  only_if { ::File.exist? '/etc/yum.repos.d/CentOS-Base.repo' }
-  action :run
-end
-
-# make sure we have the latest RHEL versions
-# execute 'update_RHEL' do
-#   command 'yum -y -q update'
-#   action :run
-# end
-
 #######################################
 # The following was taken from the PreRequisite Scanner
 # begin PRS Section
