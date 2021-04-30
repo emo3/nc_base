@@ -2,7 +2,7 @@ default['nc_base'].tap do |ncb|
   ncb['base_ver']    = '8.1.0'
   ncb['point_ver']   = "#{node['nc_base']['base_ver']}.1"
   ncb['fp_ver']      = '25'
-  ncb['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-OMNIbusCore-Linux-x86_64-FP00#{node['nc_base']['fp_ver']}.zip"
+  ncb['fp_pkg']      = "#{node['nc_base']['base_ver']}-TIV-OMNIbusCore-linux-x86_64-FP00#{node['nc_base']['fp_ver']}.zip"
   ncb['fp_rel']      = '5.50.96.20210309_2049'
   ncb['package']     = "OMNIbus-v#{node['nc_base']['point_ver']}-Core.linux64.zip"
   ncb['im_ver']      = '1.9.1005.20210309_1755'
