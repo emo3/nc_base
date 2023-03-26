@@ -9,8 +9,7 @@ end
 # Download the netcool knowledge library
 remote_file "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip" do
   source "#{node['nc_base']['media_url']}/NcKL_4.6-im.zip"
-  not_if { File.exist?("#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip") }
-  not_if { File.exist?("#{node['nc_base']['nckl_dir']}/repository.xml") }
+  not_if { ::File.exist?("#{node['nc_base']['nckl_dir']}/repository.xml") }
   user node['nc_base']['nc_act']
   group node['nc_base']['nc_grp']
   mode '0755'
@@ -18,20 +17,18 @@ remote_file "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip" do
 end
 
 # unzip the netcool knowledge library
-execute 'unzip_nckl' do
-  command "unzip -q #{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip"
-  cwd node['nc_base']['nckl_dir']
-  not_if { File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
-  user node['nc_base']['nc_act']
+archive_file 'unzip_nckl' do
+  path "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip"
+  destination node['nc_base']['nckl_dir']
+  owner node['nc_base']['nc_act']
   group node['nc_base']['nc_grp']
-  umask '022'
-  action :run
+  mode '0644'
 end
 
 template "#{node['nc_base']['temp_dir']}/install_product-nckl.xml" do
   source 'install_nckl.xml.erb'
-  not_if { File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
-  mode 0755
+  not_if { ::File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
+  mode '0755'
 end
 
 # install the netcool knowledge library
@@ -40,7 +37,7 @@ execute 'install_nckl' do
   input #{node['nc_base']['temp_dir']}/install_product-nckl.xml \
   -log #{node['nc_base']['temp_dir']}/install-nckl_log.xml \
   -acceptLicense"
-  not_if { File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
+  not_if { ::File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
   user node['nc_base']['nc_act']
   group node['nc_base']['nc_grp']
   umask '022'
