@@ -1,15 +1,6 @@
-# Create the dir's that are needed by netcool knowledge library
-directory node['nc_base']['nckl_dir'] do
-  user node['nc_base']['nc_act']
-  group node['nc_base']['nc_grp']
-  recursive true
-  mode '0755'
-end
-
 # Download the netcool knowledge library
-remote_file "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip" do
+remote_file "#{Chef::Config[:file_cache_path]}/NcKL_4.6-im.zip" do
   source "#{node['nc_base']['media_url']}/NcKL_4.6-im.zip"
-  not_if { ::File.exist?("#{node['nc_base']['nckl_dir']}/repository.xml") }
   user node['nc_base']['nc_act']
   group node['nc_base']['nc_grp']
   mode '0755'
@@ -17,17 +8,15 @@ remote_file "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip" do
 end
 
 # unzip the netcool knowledge library
-archive_file 'unzip_nckl' do
-  path "#{node['nc_base']['nckl_dir']}/NcKL_4.6-im.zip"
+archive_file "#{Chef::Config[:file_cache_path]}/NcKL_4.6-im.zip" do
   destination node['nc_base']['nckl_dir']
   owner node['nc_base']['nc_act']
   group node['nc_base']['nc_grp']
-  mode '0644'
+  action :extract
 end
 
 template "#{node['nc_base']['temp_dir']}/install_product-nckl.xml" do
   source 'install_nckl.xml.erb'
-  not_if { ::File.exist?("#{node['nc_base']['app_dir']}/NcKL/advcorr.sql") }
   mode '0755'
 end
 
@@ -42,14 +31,4 @@ execute 'install_nckl' do
   group node['nc_base']['nc_grp']
   umask '022'
   action :run
-end
-
-file "#{node['nc_base']['temp_dir']}/install_product-nckl.xml" do
-  action :delete
-end
-
-# remove temporary netcool knowledge library
-directory node['nc_base']['nckl_dir'] do
-  recursive true
-  action :delete
 end
